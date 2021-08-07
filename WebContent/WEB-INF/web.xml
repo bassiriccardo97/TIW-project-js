@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>TIW-Categories</display-name>
+  
+  <context-param>
+    <param-name>dbUrl</param-name>
+    <param-value>jdbc:mysql://localhost:3306/dbtest</param-value>
+  </context-param>
+  <context-param>
+    <param-name>dbUser</param-name>
+    <param-value>root</param-value>
+  </context-param>
+  <context-param>
+    <param-name>dbDriver</param-name>
+    <param-value>com.mysql.cj.jdbc.Driver</param-value>
+  </context-param>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+  <filter>
+	  <filter-name>LoginFilter</filter-name>
+	  <filter-class>it.polimi.tiw.project.filters.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>LoginFilter</filter-name>
+  	<url-pattern>/Home.html</url-pattern>
+  	<url-pattern>/GetCategories</url-pattern>
+ 	<url-pattern>/AddNewCategory</url-pattern>
+ 	<url-pattern>/ImagesList</url-pattern>
+ 	<url-pattern>/ShowImage</url-pattern>
+ 	<url-pattern>/DeleteCategory</url-pattern>
+ 	<url-pattern>/RenameCategory</url-pattern>
+ 	<url-pattern>/DeleteImage</url-pattern>
+ 	<url-pattern>/DownloadImage</url-pattern>
+ 	<url-pattern>/AddImage</url-pattern>
+ 	<url-pattern>/Logout</url-pattern>
+ 	<url-pattern>/MoveCategories</url-pattern>
+  </filter-mapping>
+</web-app>

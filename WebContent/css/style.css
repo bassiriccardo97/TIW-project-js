@@ -1,0 +1,584 @@
+:root {
+	--primary-color: #43A7FD;
+	--primary-color-darker: #2396FA;
+	--primary-text-color: #707070;
+	--primary-outline-color: #C6C6C6;
+	--inline-padding: 200px;
+	--background-grey-color: #F8F8F8;
+}
+
+html {
+	padding: 0;
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	color: var(--primary-text-color);
+}
+
+a:hover {
+	color: var(--primary-color);
+}
+
+ul {
+	list-style-type: none;
+}
+
+input {
+	border: none;
+}
+
+/* UTILS */
+
+.navbar-logo p {
+	color: var(--primary-color);
+	font-size: 25px;
+}
+
+.button {
+	width: 144px;
+	height: 40px;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.half-button {
+	width: 80px;
+	height: 20px;
+}
+
+.button-filled {
+	background: var(--primary-color);
+	color: white;
+}
+
+.button-filled a {
+	color: white;
+}
+
+.button-filled:hover {
+	background: var(--primary-color-darker);
+}
+
+.button-outline {
+	background: white;
+	border: 1px solid var(--primary-color);
+	color: var(--primary-color);
+}
+
+.button-outline:hover {
+	border: 1px solid var(--primary-color-darker);
+	color: var(--primary-color-darker);
+}
+
+.input {
+	height: 32px;
+	border: 1px solid var(--primary-outline-color);
+	border-radius: 50px;
+	padding: 0 8px;
+}
+
+/* GENERAL */
+
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 40px var(--inline-padding) 0;
+	padding-bottom: 200px;
+	overflow: hidden;
+}
+
+.info-message {
+	/*color: red;*/
+	text-align: center;
+	margin: 8px 0;
+}
+
+/* NAVBAR */
+.navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 4px var(--inline-padding);
+}
+
+.navbar-logo {
+	color: var(--primary-color);
+	font-weight: 700;
+}
+
+.navbar-links, .navbar-buttons {
+	display: flex;
+	flex-direction: row;
+  	cursor: pointer;
+}
+
+.navbar-links a {
+	margin: 0 20px;
+	text-decoration: none;
+}
+
+.navbar-buttons {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.navbar-text {
+	margin: 0 20px;
+	color: var(--primary-text-color);
+}
+
+/* LOGIN PAGE */
+
+.login-form {
+	width: 320px;
+	padding: 0 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 40px;
+	box-shadow:
+	  0 1px 2.7px -3px rgba(0, 0, 0, 0.059),
+	  0 2.6px 6.9px -3px rgba(0, 0, 0, 0.084),
+	  0 5.3px 14.2px -3px rgba(0, 0, 0, 0.106),
+	  0 11px 29.2px -3px rgba(0, 0, 0, 0.131),
+	  0 30px 80px -3px rgba(0, 0, 0, 0.19)
+	;
+}
+
+.login-field {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 20px;
+}
+
+.login-field label {
+	text-align: center;
+}
+
+.login-input {
+	width: 280px;	
+}
+
+.login-button {
+	margin: 20px 0;
+}
+
+
+/* CATEGORIES LIST PAGE */
+
+.categories-list {
+	background: var(--background-grey-color);
+	width: 100%;
+	border-radius: 20px;
+}
+
+.category {
+	background: white;
+	border-radius: 20px;
+	height: 40px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 20px 0;
+}
+
+.category-drag-over {
+	background: #c3ffc0;
+}
+
+.category-name {
+	display: flex;
+	flex-direction: row;
+	color: var(--primary-text-color);
+	cursor: pointer;
+}
+
+.category-name:hover {
+	color: var(--primary-color);
+}
+
+.category-name b {
+	margin-right: 4px;
+	color: black;
+}
+
+.category-control-buttons {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.category-button {
+	margin: 0 8px;
+}
+
+.new-category-container {
+	background: var(--background-grey-color);
+	border-radius: 20px;
+	width: 100%;
+	margin-top: 20px;
+	padding: 20px 0;
+}
+
+.new-category-form {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.new-category-input {
+	width: 200px;
+}
+
+ul.menu {
+  	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	overflow: hidden;
+  	background-color: #333;
+}
+
+li.menu {
+  	float: left;
+}
+
+li.menu a {
+  	display: block;
+  	color: white;
+  	text-align: center;
+  	padding: 14px 16px;
+  	text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li.menu a:hover {
+  	background-color: #111;
+}
+
+.logout-btn {
+	border: none;
+  	display: block;
+  	background-color: #333;
+  	text-align: center;
+  	color: white;
+  	padding: 14px 16px;
+  	text-decoration: none;
+}
+
+.logout-btn:hover {
+	background-color: #111;
+}
+
+.category p {
+	margin: 0 20px;
+}
+
+.to-move {
+	color: red;
+}
+
+ul.c-list {
+	list-style-type: none;
+}
+
+li.c-list {
+	list-style-type: none;
+}
+
+
+
+
+/* MODAL FOR IMAGES LIST AND RENAME */
+
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content1 {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  border-radius: 20px;
+}
+
+/* Modal Header */
+.modal-header1 {
+  padding: 2px 16px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 20px;
+}
+
+/* Modal Body */
+.modal-body1 {padding: 2px 16px;}
+
+
+/* The Close Button */
+.close1 {
+  color: var(--primary-text-color);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close1:hover,
+.close1:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.image-container {
+  width: 25%;
+  padding: 3px 3px 3px 3px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+
+.image-container:hover .image {
+  opacity: 0.3;
+}
+
+.image-container:hover .middle {
+  opacity: 1;
+}
+
+img.list {
+	height: 200px;
+	max-width: 100%;
+	object-fit: contain;
+  	opacity: 1;
+  	display: block;
+  	transition: .5s ease;
+  	backface-visibility: hidden;
+  	cursor: pointer;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  transform: translateY(-100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+
+
+/* MODAL FOR SLIDES */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+  background-color: black;
+}
+
+.slides-container {
+	text-align: center;
+}
+
+.cursor-row-container {
+	overflow-x: scroll;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+  padding: 3px 3px 3px 3px;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+
+.slide-image {
+	width: auto;
+	height: 400px;
+}
+
+.cursor-image {
+	width: auto;
+	max-height: 100px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* FOOTER */
+
+.contacts {
+	box-sizing: border-box;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: var(--primary-color);
+	padding: 20px 30px 10px 30px;
+	height: 140px;
+	color: white;
+}
+
+.emails {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: var(--primary-color);
+	padding: 10px 30px 10px 30px;
+}
+
+.emails a {
+	color: white;
+}
+
+.emails a:hover {
+	color: blue;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Catalogo immagini</title>
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" media="all" href="css/style.css">
+	<script src="lang.js" charset="utf-8"></script>
+	<script src="utils.js" charset="utf-8" defer></script>
+	<script src="home.js" charset="utf-8" defer></script>
+</head>
+<body>
+	<div class="navbar">
+		<div class="navbar-logo">
+			<p id="title"></p>
+		</div>
+		<div class="navbar-links">
+			<a onclick="setLanguage('it'); setPageLanguage()">&#127470;&#127481;</a>
+			<a onclick="setLanguage('en'); setPageLanguage()">&#127468;&#127463;</a>
+			<a onclick="setLanguage('es'); setPageLanguage()">&#127466;&#127480;</a>
+			<a onclick="setLanguage('de'); setPageLanguage()">&#127465;&#127466;</a>
+			<a onclick="setLanguage('fr'); setPageLanguage()">&#127467;&#127479;</a> 
+		</div>
+		<div class="navbar-buttons">
+			<div class="navbar-text"><span id="welcome"></span></div>
+			<div class="button button-outline">
+				<a id="logout-button" onclick="handleLogout()"></a>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div id="images-list-modal" class="modal1">
+			<div class="modal-content1">
+		    	<div class="modal-header1">
+	    			<span class="close1">&times;</span>
+	    			<h2 id="images-list-modal-title"></h2>
+	  			</div>
+	  			<div class="modal-body1">
+					<div class="info-message" id="info-message-images"></div>
+	  				<p id="no-images"></p>
+		    		<div id="images-list" class="categories-list"></div>
+	  			</div>
+		  	</div>
+		</div>
+		<div id="rename-modal" class="modal1">
+		  	<div class="modal-content1">
+		  		<div class="modal-header1">
+		  			<span class="close1">&times;</span>
+		  			<h2 id="rename-modal-title"></h2>
+		  		</div>
+				<div class="info-message" id="info-message-rename"></div>
+				<p id="p-enter-name"></p>
+	    		<div class="new-category-container">
+					<form class="new-category-form" action="#" id="rename-category-form">
+						<input type="text" class="input new-category-input" id="category-to-rename-name" required/>
+						<input type="button" class="button button-filled" id="rename-category-button"/>	
+					</form>
+				</div>
+		  	</div>
+		</div>
+		<div id="gallery-modal" class="modal">
+			<span class="close cursor" onclick="closeGalleryModal()">&times;</span>
+		  
+	  		<div id="gallery-modal-content" class="modal-content">
+				<div id="slides-container" class="slides-container"></div>
+	   			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	   			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	
+	   			<div class="caption-container">
+	     			<p id="caption"></p>
+	   			</div>
+	
+				<div class="cursor-row-container">
+					<div id="cursor-container" class="row"></div>
+	   			</div>
+ 			</div>
+		</div>
+		
+		<div class="info-message" id="info-message"></div>
+		<div class="submit-changes category-control-buttons" id="submit-changes"></div>
+		<ul id="categories-list" class="categories-list"></ul>
+
+		<div class="new-category-container">
+			<form class="new-category-form" action="#" id="new-category-form">
+				<input id="new-category-name" type="text" class="input new-category-input" required> 
+					<select id="new-category-father-id"></select> 
+					<input type="button" class="button button-filled" value="Submit" id="new-category-button">
+			</form>
+		</div>
+	</div>
+	<div class="contacts">
+		<address id="produced-by"></address>
+		<div class="emails">
+			<address>
+				Riccardo Bassi: <a href="mailto:riccardo4.bassi@mail.polimi.it">riccardo4.bassi@mail.polimi.it</a>
+				<p class="person-code">: 10521394</p>
+			</address>
+			<address>
+				Francesco Battagin: <a href="mailto:batta@mail.polimi.it">francesco.battagin@mail.polimi.it</a>
+				<p class="person-code">: 10528227</p>
+			</address>
+			<address>
+				Francesco Melegati Maccari: <a href="mailto:francescomaria.melegati@mail.polimi.it">francescomaria.melegati@mail.polimi.it</a>
+				<p class="person-code">: 10654486</p>
+			</address>
+		</div>
+	</div>
+</body>
+</html>

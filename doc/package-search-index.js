@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"it.polimi.tiw.project.beans"},{"l":"it.polimi.tiw.project.controllers"},{"l":"it.polimi.tiw.project.dao"},{"l":"it.polimi.tiw.project.filters"},{"l":"it.polimi.tiw.project.utils"}];updateSearchResults();

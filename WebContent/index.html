@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+	<title>Catalogo immagini</title>
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com"> 
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" media="all" href="css/style.css">
+	<script src="lang.js" charset="utf-8"></script>
+	<script src="utils.js" charset="utf-8" defer></script>
+	<script src="loginManager.js" charset="utf-8" defer></script>
+</head>
+<body>
+	<div class="navbar">
+		<div class="navbar-logo">
+			<p id="title"></p>
+		</div>
+		<div class="navbar-links">
+			<a onclick="setLanguage('it'); setPageLanguage()">&#127470;&#127481;</a>
+			<a onclick="setLanguage('en'); setPageLanguage()">&#127468;&#127463;</a>
+			<a onclick="setLanguage('es'); setPageLanguage()">&#127466;&#127480;</a>
+			<a onclick="setLanguage('de'); setPageLanguage()">&#127465;&#127466;</a>
+			<a onclick="setLanguage('fr'); setPageLanguage()">&#127467;&#127479;</a> 
+		</div>
+	</div>
+	<div class="content">
+		<form action="#" class="login-form">
+			<div id="error-message" class="error-message"></div>
+			<div class="login-field">
+				<label class="title" for="username-input">Username</label>
+				<input class="input login-input" id="username-input" type="text" required/>
+			</div>
+			<div class="login-field">
+				<label class="title" for="password-input">Password</label>
+				<input class="input login-input" id="password-input" type="password" required/>
+			</div>
+			<div class="login-buttons">
+				<input type="button" id="login-button" class="button button-filled login-button">
+				<input type="button" id="register-button" class="button button-filled login-button">
+			</div>
+	 	</form>
+	</div>
+	<div class="contacts">
+		<address id="produced-by"></address>
+		<div class="emails">
+			<address>
+				Riccardo Bassi: <a href="mailto:riccardo4.bassi@mail.polimi.it">riccardo4.bassi@mail.polimi.it</a>
+				<p class="person-code">: 10521394</p>
+			</address>
+			<address>
+				Francesco Battagin: <a href="mailto:batta@mail.polimi.it">francesco.battagin@mail.polimi.it</a>
+				<p class="person-code">: 10528227</p>
+			</address>
+			<address>
+				Francesco Melegati Maccari: <a href="mailto:francescomaria.melegati@mail.polimi.it">francescomaria.melegati@mail.polimi.it</a>
+				<p class="person-code">: 10654486</p>
+			</address>
+		</div>
+	</div>
+</body>
+</html>
